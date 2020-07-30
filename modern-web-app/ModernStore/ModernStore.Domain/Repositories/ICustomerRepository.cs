@@ -6,8 +6,6 @@ namespace ModernStore.Domain.Repositories
     public interface ICustomerRepository
     {
         Customer Get(Guid id);
-        Customer GetByUserId(Guid id);
-        Customer GetByDocument(string document);
         bool DocumentExists(string document);
         void Update(Customer customer);
         void Save(Customer customer);
