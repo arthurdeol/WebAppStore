@@ -9,6 +9,7 @@ namespace ModernStore.Domain.ValueObjects
 {
     public class Email : Notifiable
     {
+        protected Email() { }
         public Email(string adress)
         {
             Adress = adress;

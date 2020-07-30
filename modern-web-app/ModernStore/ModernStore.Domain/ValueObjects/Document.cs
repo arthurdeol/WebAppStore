@@ -9,7 +9,7 @@ namespace ModernStore.Domain.ValueObjects
 {
     public class Document : Notifiable
     {
-
+		protected Document() { }
 		public string Number { get; private set; }
 
         public Document(string number)

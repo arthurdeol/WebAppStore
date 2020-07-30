@@ -11,6 +11,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModernStore.Domain.Tests", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModernStore.Infra", "ModerStore.Infra\ModernStore.Infra.csproj", "{B9FCDB05-C12F-4CFC-8CF7-C47BD4E31E8E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - API", "1 - API", "{F14008E5-5133-4374-B1E3-893161ADD664}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Domain", "2 - Domain", "{6F3C8CC2-8817-4CB5-BB2D-78454C5A6AA6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Infra", "3 - Infra", "{D2068F03-551E-487A-BF82-17010A2D78ED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,6 +42,12 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EA994CEE-21CE-45F8-A542-63660913EA2E} = {6F3C8CC2-8817-4CB5-BB2D-78454C5A6AA6}
+		{D4D1BF00-8724-4CA3-A237-689C9AF63403} = {6F3C8CC2-8817-4CB5-BB2D-78454C5A6AA6}
+		{07212155-394A-4E71-A3C9-88074BBC6AA6} = {6F3C8CC2-8817-4CB5-BB2D-78454C5A6AA6}
+		{B9FCDB05-C12F-4CFC-8CF7-C47BD4E31E8E} = {D2068F03-551E-487A-BF82-17010A2D78ED}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3C25E437-EA80-4C9C-9DB2-3100F34BA33A}

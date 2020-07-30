@@ -9,12 +9,13 @@ namespace ModernStore.Domain.ValueObjects
 {
     public class Name : Notifiable
     {
+        protected Name() { }
         public Name(string firstName, string lastName)
         {
             FirstName = firstName;
             LastName = lastName;
 
-            new ValidationContract<Name>(this)
+             new ValidationContract<Name>(this)
                 .IsRequired(x => x.FirstName, "Nome é obrigatório")
                 .HasMaxLenght(x => x.FirstName, 60)
                 .HasMinLenght(x => x.FirstName, 3)
