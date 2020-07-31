@@ -1,4 +1,5 @@
-﻿using ModernStore.Domain.Entities;
+﻿using ModernStore.Domain.Commands.Results;
+using ModernStore.Domain.Entities;
 using System;
 
 namespace ModernStore.Domain.Repositories
@@ -9,5 +10,6 @@ namespace ModernStore.Domain.Repositories
         bool DocumentExists(string document);
         void Update(Customer customer);
         void Save(Customer customer);
+        GetCustomerCommandResult Get(string username);//alterar para document
     }
 }

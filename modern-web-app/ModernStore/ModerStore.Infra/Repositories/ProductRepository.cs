@@ -1,7 +1,11 @@
-﻿using ModernStore.Domain.Entities;
+﻿using Dapper;
+using ModernStore.Domain.Commands.Results;
+using ModernStore.Domain.Entities;
 using ModernStore.Domain.Repositories;
 using ModerStore.Infra.Contexts;
 using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 
 namespace ModerStore.Infra.Repositories
@@ -16,6 +20,17 @@ namespace ModerStore.Infra.Repositories
         public Product Get(Guid id)
         {
             return _context.Products.AsNoTracking().FirstOrDefault(x => x.Id == id);
+        }
+
+        public IEnumerable<GetProductListCommandResult> Get()
+        {
+            var query = @"Select [ID], [TITLE], [PRICE], [IMAGE] FROM [PRODUCT]";
+
+            using (var conn = new SqlConnection(@""))
+            {
+                conn.Open();
+                return conn.Query<GetProductListCommandResult>(query);
+            }
         }
     }
 }
