@@ -6,7 +6,7 @@ namespace ModerStore.Infra.Contexts
 {
     public class ModernStoreDataContext : DbContext
     {
-        public ModernStoreDataContext() : base(@"Data Source=SQL5030.site4now.net;Initial Catalog=DB_A18BE5_arthurdeol;User Id=DB_A18BE5_arthurdeol_admin;Password=samara25;")
+        public ModernStoreDataContext() : base(@"")
         {
             Configuration.LazyLoadingEnabled = false;
             Configuration.ProxyCreationEnabled = false;
